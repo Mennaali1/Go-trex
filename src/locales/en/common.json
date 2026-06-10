@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "customers": "Our Customers",
+    "contact": "Contact"
+  },
+  "services_list": {
+    "feasibility": "Feasibility Study",
+    "security": "Security Research Service",
+    "importExport": "Import and Export",
+    "shipping": "Shipping",
+    "customs": "Customs Clearance",
+    "storage": "Storage",
+    "insurance": "Insurance"
+  },
+  "hero": {
+    "company": "",
+    "slogan": "Global Reach, Trusted Quality",
+    "cta": "Discover Our Services",
+    "contact": "Get In Touch"
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "body": "GO TREX for Export is a leading Egyptian company specialized in exporting a wide range of food industry products. Based in Egypt, we serve as a trusted partner for clients seeking premium food products sourced and processed under the highest standards. We are committed to reliability, consistency, and building long-term partnerships that deliver value across international markets."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "body": "To deliver high-quality Egyptian food products to global markets while building long-term partnerships based on trust, quality, and mutual growth."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "body": "To become one of the most recognized and respected food export companies in the Middle East and Africa, expanding into new international markets with a commitment to excellence and sustainability."
+  },
+  "values": {
+    "title": "What Drives Us",
+    "quality": { "title": "Quality", "desc": "Ensuring international food safety standards in every product we export." },
+    "integrity": { "title": "Integrity", "desc": "Transparency and honesty in all our business transactions." },
+    "customer": { "title": "Customer Satisfaction", "desc": "Reliable service and tailored solutions for every client." },
+    "innovation": { "title": "Innovation", "desc": "Continuous improvement in our processes and offerings." },
+    "sustainability": { "title": "Sustainability", "desc": "Responsible sourcing and production for future generations." }
+  },
+  "servicesSection": {
+    "title": "Our Services",
+    "subtitle": "End-to-end trade solutions tailored to your global ambitions"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We're ready to help you expand your market reach",
+    "sectionLabel": "Get In Touch",
+    "infoTitle": "Contact Information",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "phoneLabel": "Phone",
+    "email": "Email Address",
+    "emailLabel": "Email",
+    "message": "Message",
+    "addressLabel": "Address",
+    "followUs": "Follow Us",
+    "whatsapp": "WhatsApp",
+    "reachOut": "Reach Out",
+    "send": "Send Message",
+    "success": "Message sent successfully! We'll get back to you soon.",
+    "error": "Failed to send. Please try again.",
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address"
+  },
+  "customers": {
+    "title": "Our Trusted Customers",
+    "subtitle": "Partnering with industry leaders across the globe"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "address": "Etlalah El Abbasiya Compound, Cairo, Egypt"
+  },
+  "map": {
+    "title": "Our Global Reach",
+    "subtitle": "Headquartered in Egypt, delivering to markets worldwide"
+  },
+  "lang": "العربية"
+}
