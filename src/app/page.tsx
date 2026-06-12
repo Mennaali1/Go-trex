@@ -3,25 +3,7 @@ import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import ContactSection from "@/components/ContactSection";
 
-const serviceIcons: Record<string, string> = {
-  feasibility: "📊",
-  security: "🔍",
-  importExport: "🌐",
-  shipping: "🚢",
-  customs: "📋",
-  storage: "🏭",
-  insurance: "🛡️",
-};
 
-const serviceHrefs: Record<string, string> = {
-  feasibility: "/services/feasibility-study",
-  security: "/services/security-research",
-  importExport: "/services/import-export",
-  shipping: "/services/shipping",
-  customs: "/services/customs-clearance",
-  storage: "/services/storage",
-  insurance: "/services/insurance",
-};
 
 const valueIcons = ["⭐", "🤝", "💎", "💡", "🌱"];
 const valueKeys = ["quality", "integrity", "customer", "innovation", "sustainability"] as const;
@@ -64,12 +46,7 @@ export default function Home() {
           </p>
 
           <div className={`flex flex-col sm:flex-row gap-4 justify-center animate-fade-up ${isRTL ? "sm:flex-row-reverse" : ""}`} style={{ animationDelay: "0.4s" }}>
-            <Link
-              href="#services"
-              className="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold rounded-lg hover:from-gold-400 hover:to-gold-300 transition-all duration-300 text-sm tracking-wide shadow-lg shadow-gold-500/20"
-            >
-              {t.hero.cta}
-            </Link>
+         
             <Link
               href="/contact"
               className="px-8 py-4 border border-white/20 text-white rounded-lg hover:border-gold-400/50 hover:bg-white/5 transition-all duration-300 text-sm tracking-wide"
@@ -150,36 +127,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES PREVIEW ── */}
-      <section id="services" className="py-24 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gold-500 text-xs font-semibold uppercase tracking-widest mb-3">What We Offer</p>
-            <h2 className="font-display text-4xl font-bold text-white">{t.servicesSection.title}</h2>
-            <p className="text-white/40 mt-3">{t.servicesSection.subtitle}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {Object.entries(t.services_list).map(([key, label]) => (
-              <Link
-                key={key}
-                href={serviceHrefs[key]}
-                className="service-card bg-navy-800/40 border border-white/5 hover:border-gold-500/30 rounded-xl p-6 group"
-              >
-                <div className="text-3xl mb-4">{serviceIcons[key]}</div>
-                <h3 className={`text-white font-semibold mb-2 group-hover:text-gold-400 transition-colors duration-200 ${isRTL ? "text-right" : ""}`}>
-                  {label}
-                </h3>
-                <div className={`flex items-center gap-1 text-gold-500/60 text-xs group-hover:text-gold-400 transition-colors duration-200 ${isRTL ? "flex-row-reverse" : ""}`}>
-                  <span>Learn more</span>
-                  <svg className={`w-3 h-3 ${isRTL ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <ContactSection accent="gold" sectionLabel={t.contact.reachOut} />
 
