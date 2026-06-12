@@ -33,35 +33,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-4">
-              {t.nav.services}
-            </h4>
-
-            <ul className="space-y-2">
-              {Object.entries(t.services_list).map(([key, label]) => (
-                <li key={key}>
-                  <Link
-                    href={`/services/${
-                      key === "importExport"
-                        ? "import-export"
-                        : key === "feasibility"
-                        ? "feasibility-study"
-                        : key === "security"
-                        ? "security-research"
-                        : key === "customs"
-                        ? "customs-clearance"
-                        : key
-                    }`}
-                    className="text-white/50 hover:text-gold-400 text-sm transition-colors duration-200"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+         
 
           {/* Contact */}
           <div>
