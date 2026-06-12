@@ -53,7 +53,8 @@ export default function Navbar() {
   alt="Go Trex Logo"
   width={120}
   height={56}
-className="object-contain h-12 w-auto brightness-0 invert contrast-200"/>
+  className="object-contain h-12 w-auto"
+/>
 </Link>
 
         {/* Desktop Nav */}

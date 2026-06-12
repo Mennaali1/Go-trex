@@ -41,6 +41,7 @@ const config: Config = {
           800: "#001f5c",
           900: "#001433",
         },
+        
       },
       fontFamily: {
         display: ["var(--font-playfair)", "Georgia", "serif"],
