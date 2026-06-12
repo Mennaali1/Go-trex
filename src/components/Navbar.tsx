@@ -4,22 +4,12 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 import Image from "next/image";
 
-const serviceRoutes = [
-  { key: "feasibility", href: "/services/feasibility-study" },
-  { key: "security", href: "/services/security-research" },
-  { key: "importExport", href: "/services/import-export" },
-  { key: "shipping", href: "/services/shipping" },
-  { key: "customs", href: "/services/customs-clearance" },
-  { key: "storage", href: "/services/storage" },
-  { key: "insurance", href: "/services/insurance" },
-];
+
 
 export default function Navbar() {
   const { t, toggleLocale, isRTL } = useI18n();
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -27,15 +17,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
+
 
   return (
     <nav
@@ -66,35 +48,8 @@ export default function Navbar() {
             {t.nav.about}
           </Link>
 
-          {/* Services Dropdown */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center gap-1.5 text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-200"
-            >
-              {t.nav.services}
-              <svg
-                className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
-                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {dropdownOpen && (
-              <div className={`absolute top-full mt-3 w-56 bg-navy-900 border border-gold-500/20 rounded-lg shadow-2xl shadow-black/50 py-2 ${isRTL ? "right-0" : "left-0"}`}>
-                {serviceRoutes.map((s) => (
-                  <Link
-                    key={s.key}
-                    href={s.href}
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/70 hover:text-gold-400 hover:bg-white/5 transition-all duration-150"
-                  >
-                    {t.services_list[s.key as keyof typeof t.services_list]}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+        
+       
 
           <Link href="/customers" className="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-200">
             {t.nav.customers}
@@ -146,19 +101,7 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <div className="pt-2">
-            <p className="text-gold-500 text-xs font-semibold uppercase tracking-wider mb-2">{t.nav.services}</p>
-            {serviceRoutes.map((s) => (
-              <Link
-                key={s.key}
-                href={s.href}
-                onClick={() => setMobileOpen(false)}
-                className="block text-white/60 hover:text-gold-400 py-1.5 text-sm pl-3"
-              >
-                {t.services_list[s.key as keyof typeof t.services_list]}
-              </Link>
-            ))}
-          </div>
+     
         </div>
       )}
     </nav>

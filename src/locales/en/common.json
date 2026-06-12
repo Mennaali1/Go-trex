@@ -2,19 +2,10 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
     "customers": "Our Customers",
     "contact": "Contact"
   },
-  "services_list": {
-    "feasibility": "Feasibility Study",
-    "security": "Security Research Service",
-    "importExport": "Import and Export",
-    "shipping": "Shipping",
-    "customs": "Customs Clearance",
-    "storage": "Storage",
-    "insurance": "Insurance"
-  },
+
   "hero": {
     "company": "",
     "slogan": "Global Reach, Trusted Quality",
@@ -41,10 +32,7 @@
     "innovation": { "title": "Innovation", "desc": "Continuous improvement in our processes and offerings." },
     "sustainability": { "title": "Sustainability", "desc": "Responsible sourcing and production for future generations." }
   },
-  "servicesSection": {
-    "title": "Our Services",
-    "subtitle": "End-to-end trade solutions tailored to your global ambitions"
-  },
+
   "contact": {
     "title": "Get In Touch",
     "subtitle": "We're ready to help you expand your market reach",

@@ -98,20 +98,7 @@ export default function Home() {
               <div className={`w-14 h-0.5 bg-gold-500 mb-8 ${isRTL ? "mr-0 ml-auto" : ""}`} />
               <p className="text-navy-800/70 text-lg leading-relaxed">{t.whoWeAre.body}</p>
             </div>
-            {/* Stats panel */}
-            <div className={`grid grid-cols-2 gap-4 ${isRTL ? "lg:col-start-1" : ""}`}>
-              {[
-                { num: "15+", label: "Years Experience" },
-                { num: "50+", label: "Export Destinations" },
-                { num: "200+", label: "Happy Clients" },
-                { num: "100%", label: "Quality Assured" },
-              ].map((s) => (
-                <div key={s.label} className="bg-navy-900 rounded-xl p-6 text-center">
-                  <p className="font-display text-4xl font-bold text-gold-400">{s.num}</p>
-                  <p className="text-white/50 text-sm mt-2">{s.label}</p>
-                </div>
-              ))}
-            </div>
+         
           </div>
         </div>
       </section>
