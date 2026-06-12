@@ -24,7 +24,7 @@ export default function Footer() {
                 alt="Go Trex Logo"
                 width={130}
                 height={60}
-                className="object-contain h-14 w-auto brightness-0 invert"
+  className="object-contain h-12 w-auto"
               />
             </div>
 

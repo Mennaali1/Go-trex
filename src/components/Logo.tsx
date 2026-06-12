@@ -22,8 +22,7 @@ export default function Logo({ size = "md", showText = false, className = "" }: 
         alt="GO TREX for Export"
         width={width}
         height={height}
-        className={`${img} object-contain`}
-        priority={size === "lg"}
+className={`${img} object-contain [mix-blend-mode:screen]`}        priority={size === "lg"}
       />
       {showText && (
         <div className="hidden sm:block">
