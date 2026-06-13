@@ -2,7 +2,7 @@
 import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import ContactSection from "@/components/ContactSection";
-
+import WhoWeAreCarousel from "@/components/WhoWeAreCarousel";
 
 
 const valueIcons = ["⭐", "🤝", "💎", "💡", "🌱"];
@@ -36,10 +36,10 @@ export default function Home() {
             {isRTL ? t.hero.company : (
               <>
                 GO TREX<br />
-                <span className="text-gold-gradient">for Export</span>
               </>
             )}
           </h1>
+          
 
           <p className="text-xl sm:text-2xl text-white/60 tracking-[0.2em] uppercase font-light mt-6 mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             {t.hero.slogan}
@@ -63,8 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHO WE ARE ── */}
-      <section className="py-24 bg-white">
+    <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${isRTL ? "lg:grid-flow-dense" : ""}`}>
             <div className={isRTL ? "text-right lg:col-start-2" : ""}>
@@ -75,10 +74,13 @@ export default function Home() {
               <div className={`w-14 h-0.5 bg-gold-500 mb-8 ${isRTL ? "mr-0 ml-auto" : ""}`} />
               <p className="text-navy-800/70 text-lg leading-relaxed">{t.whoWeAre.body}</p>
             </div>
-         
+          <div className={isRTL ? "lg:col-start-1" : ""}>
+  <WhoWeAreCarousel />
+</div>
           </div>
         </div>
       </section>
+
 
       {/* ── MISSION + VISION ── */}
       <section className="py-24 bg-navy-900">
@@ -163,18 +165,13 @@ export default function Home() {
           </div>
 
           {/* Google Maps Embed */}
-          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50" style={{ height: "420px" }}>
-            <iframe
-              src="https://maps.app.goo.gl/ZavhrDCmqqsig5Do7"
-              width="100%"
-              height="100%"
-              style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) saturate(0.6)" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="GO TREX Location"
-            />
-          </div>
+<div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-white">
+  <img
+    src="/map.png"
+    alt="GO TREX Location"
+    className="w-full h-[420px] object-contain"
+  />
+</div>        
         </div>
       </section>
     </div>

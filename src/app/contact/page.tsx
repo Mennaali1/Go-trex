@@ -24,7 +24,7 @@ export default function ContactPage() {
               <h2 className="font-display text-3xl font-bold text-white mb-8">Contact Information</h2>
               <div className="space-y-6">
                 {[
-                  { icon: "📞", label: "Phone", value: "+20 112 229 9843", href: "tel:+201122299843" },
+                  { icon: "📞", label: "Phone", value: <span dir="ltr">+20 112 229 9843</span>, href: "tel:+201122299843" },
                   { icon: "✉️", label: "Email", value: "Youssef@abu-shama.com", href: "mailto:Youssef@abu-shama.com" },
                   { icon: "📍", label: "Address", value: t.footer.address, href: "#" },
                 ].map((item) => (
@@ -34,8 +34,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-white/40 text-xs uppercase tracking-wider mb-1">{item.label}</p>
-                      <p className="text-white text-sm group-hover:text-gold-400 transition-colors">{item.value}</p>
-                    </div>
+<p
+  className="text-white text-sm group-hover:text-gold-400 transition-colors"
+  style={{ direction: "ltr", unicodeBidi: "embed" }}
+>
+  {item.value}
+</p>                    </div>
                   </a>
                 ))}
               </div>

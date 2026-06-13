@@ -16,22 +16,7 @@ export default function Footer() {
             isRTL ? "text-right" : "text-left"
           }`}
         >
-          {/* Brand */}
-          <div>
-            <div className="mb-4">
-              <Image
-                src="/logo.jpeg"
-                alt="Go Trex Logo"
-                width={130}
-                height={60}
-  className="object-contain h-12 w-auto"
-              />
-            </div>
-
-            <p className="text-white/50 text-sm leading-relaxed">
-              {t?.whoWeAre?.body?.slice(0, 120)}…
-            </p>
-          </div>
+       
 
          
 
@@ -67,10 +52,8 @@ export default function Footer() {
               </li>
 
               <li>
-                <a
-                  href="tel:+201122299843"
-                  className="hover:text-gold-400 transition-colors"
-                >
+               <a href="tel:+201122299843" className="ltr hover:text-gold-400">
+                  
                   +20 112 229 9843
                 </a>
               </li>
@@ -121,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-6 text-center">
           <p className="text-white/30 text-sm">
-            © {year} GO TREX for Export. {t.footer.rights}
+            © {year} GO TREX. {t.footer.rights}
           </p>
         </div>
       </div>

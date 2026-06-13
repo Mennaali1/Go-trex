@@ -18,6 +18,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* Who We Are */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
