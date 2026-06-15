@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --navy-900: #061240;
-  --navy-800: #0a2070;
-  --gold-500: #1d4ed8;
-  --gold-400: #3b82f6;
+  --navy-900: #0a1f6e;
+  --navy-800: #1a3a9f;
+  --gold-500: #3b82f6;
+  --gold-400: #60a5fa;
 }
 
 html {
@@ -27,16 +27,16 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #03091f;
+  background: #071030;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cfd8ef;
+  background: #3b82f6;
   border-radius: 3px;
 }
 
 /* Gold gradient text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -76,7 +76,7 @@ html {
 .section-line {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #eeeff6, #94b3e3);
+  background: linear-gradient(90deg, #3b82f6, #93c5fd);
   margin: 16px auto;
 }
 
@@ -84,12 +84,35 @@ html {
   margin: 16px auto;
 }
 
-/* Hero background pattern */
+/* Hero background pattern — logo + bright blue gradient */
 .hero-pattern {
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(29, 78, 216, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #03091f 0%, #061240 50%, #0a2070 100%);
+  position: relative;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, #071030 0%, #0a1f6e 45%, #1a3a9f 100%);
+}
+
+/* Logo watermark in hero background */
+.hero-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/logo_final.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 65%;
+  filter: brightness(10) saturate(0);
+  mix-blend-mode: overlay;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Make sure hero content sits above the watermark */
+.hero-pattern > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Card hover effect */
@@ -98,8 +121,9 @@ html {
 }
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
 }
+
 /* Nav blur */
 .nav-blur {
   backdrop-filter: blur(20px);
