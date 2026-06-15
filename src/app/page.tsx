@@ -14,32 +14,30 @@ export default function Home() {
   return (
     <div className={isRTL ? "rtl" : "ltr"}>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-pattern">
-        {/* Decorative circles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gold-500/5 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gold-500/5 blur-3xl" />
-          {/* Grid lines */}
-          <div className="absolute inset-0 opacity-5"
-            style={{ backgroundImage: "linear-gradient(rgba(201,162,39,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,0.3) 1px,transparent 1px)", backgroundSize: "80px 80px" }}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs tracking-widest uppercase mb-8 animate-fade-in">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
-            Egypt's Premier Food Export Company
-          </div>
-
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-4 animate-fade-up">
-            {isRTL ? t.hero.company : (
-              <>
-                GO TREX<br />
-              </>
-            )}
-          </h1>
-          
+      
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden hero-pattern">
+  {/* Decorative circles */}
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
+    <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
+    {/* Grid lines */}
+    <div className="absolute inset-0 opacity-5"
+      style={{ backgroundImage: "linear-gradient(rgba(59,130,246,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.3) 1px,transparent 1px)", backgroundSize: "80px 80px" }}
+    />
+  </div>
+  <div className="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
+    {/* Badge */}
+    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs tracking-widest uppercase mb-8 animate-fade-in">
+      <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+      Egypt's Premier Food Export Company
+    </div>
+    <h1 className="w-full font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-4 animate-fade-up">
+      {isRTL ? t.hero.company : (
+        <>
+          GO TREX<br />
+        </>
+      )}
+    </h1>
 
           <p className="text-xl sm:text-2xl text-white/60 tracking-[0.2em] uppercase font-light mt-6 mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             {t.hero.slogan}
