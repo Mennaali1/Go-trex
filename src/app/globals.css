@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --navy-900: #0a1f6e;
-  --navy-800: #1a3a9f;
+  --navy-900: #061240;
+  --navy-800: #0a2070;
   --gold-500: #3b82f6;
   --gold-400: #60a5fa;
 }
@@ -27,7 +27,7 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #071030;
+  background: #03091f;
 }
 ::-webkit-scrollbar-thumb {
   background: #3b82f6;
@@ -90,7 +90,7 @@ html {
   background-image:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.35) 0%, transparent 55%),
     radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.25) 0%, transparent 55%),
-    linear-gradient(135deg, #071030 0%, #0a1f6e 45%, #1a3a9f 100%);
+    linear-gradient(135deg, #03091f 0%, #061240 45%, #0a2070 100%);
 }
 
 /* Logo watermark in hero background */
